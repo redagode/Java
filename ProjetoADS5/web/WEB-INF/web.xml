@@ -24,4 +24,43 @@
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
+    
+    
+    <!--parâmetros de configuração de banco de dados -->
+    <context-param>
+        <param-name>stringConexao</param-name>
+        <param-value>jdbc:sqlserver://localhost;databaseName=aulabd</param-value>        
+    </context-param>
+    
+    <context-param>
+        <param-name>usuario</param-name>
+        <param-value>sa</param-value>        
+    </context-param>
+    
+    <context-param>
+        <param-name>senha</param-name>
+        <param-value>123456</param-value>        
+    </context-param>
+    
+    
+    
+    <!--o código abaixo é necessário para a acentuação de páginas e conteúdos -->
+    <filter>  
+        <filter-name>encodingFilter</filter-name>  
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+        <init-param>  
+            <param-name>encoding</param-name>  
+            <param-value>UTF-8</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>forceEncoding</param-name>  
+            <param-value>true</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>encodingFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>filter-mapping
+    
+    
 </web-app>
